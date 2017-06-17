@@ -1,5 +1,6 @@
 package org.apache.spark.sql
 
+import io.univalence.centrifuge.{Annotation, Result}
 import org.apache.spark.sql.catalyst.encoders.RowEncoder
 import org.apache.spark.sql._
 import org.apache.spark.sql.catalyst.expressions.{Alias, Expression, GenericRow, GenericRowWithSchema, NamedExpression, ScalaUDF}
@@ -12,12 +13,6 @@ case class Person(name:String,age:Int)
 case class Address(personName:String,street:String,postcode:String,city:String)
 
 
-case class Annotation(msg:String,origin:Option[String],isError:Boolean,count:Long)
-
-object Annotation {
-
-  def fromString(s:String, error:Boolean=true):Annotation = Annotation(s,None,error,1L)
-}
 
 object Explore {
 
