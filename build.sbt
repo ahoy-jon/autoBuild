@@ -25,12 +25,15 @@ resolvers ++= Seq(
 libraryDependencies ++= Seq(
   "com.chuusai" %% "shapeless" % "2.2.5",
   "org.scalaz" %% "scalaz-core" % "7.1.4",
+  "org.spire-math" % "spire_2.11" % "0.13.0",
+  "org.typelevel" %% "shapeless-spire" % "0.6.1",
   "org.typelevel" %% "shapeless-scalaz" % "0.4",
   "io.univalence" %% "excelsius" % "0.1-SNAPSHOT",
   "org.apache.spark" %% "spark-core" % sparkV,
   "org.apache.spark" %% "spark-sql" % sparkV,
   "org.scalatest" % "scalatest_2.11" % "3.0.3" % "test"
 )
+
 
 //2.1.0-SNAPSHOT
 addCompilerPlugin("org.scalamacros" % "paradise" % "2.1.0-M5" cross CrossVersion.full)
